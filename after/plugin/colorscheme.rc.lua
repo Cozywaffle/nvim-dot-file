@@ -1,9 +1,14 @@
-local status, n = pcall(require, 'neosolarized')
+local status, n = pcall(require, 'solarized-osaka')
+
 if (not status) then return end
 
-n.setup({ comment = true })
+n.setup({ 
+        comment_italics = true,
+        transpency = true
+})
 
-local colorbuddy = require('colorbuddy.init')
+
+local colorbuddy = require 'colorbuddy.init'
 local Color = colorbuddy.Color
 local colors = colorbuddy.colors
 local Group = colorbuddy.Group
@@ -11,9 +16,9 @@ local groups = colorbuddy.groups
 local styles = colorbuddy.styles
 
 Color.new('black', '#000000')
-Group.new('CursorLine', colors.none, colors.base03, styles.NONE, colors.base1)
+Group.new('CursorLine', colors.NONE, colors.base03, styles.NONE, colors.base1)
 Group.new('CursorLineNr', colors.yellow, colors.black, styles.NONE, colors.base1)
-Group.new('Visual', colors.none, colors.base03, styles.reverse)
+Group.new('Visual', colors.NONE, colors.base1, styles.reverse)
 
 local cError = groups.Error and groups.Error.fg or colors.red
 local cInfo = groups.Information and groups.Info.fg or colors.blue

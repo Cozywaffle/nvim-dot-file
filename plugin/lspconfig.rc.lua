@@ -14,7 +14,7 @@ local on_attach = function(client, bufnr)
         end
 end
 
-nvim_lsp.tsserver.setup {
+nvim_lsp.ts_ls.setup {
         on_attach = on_attach,
         filetypes = { "typescript", "typescriptreact", "javascript", "typescript" },
         cmd = { "typescript-language-server", "--stdio" }

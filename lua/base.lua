@@ -8,6 +8,7 @@ vim.cmd('autocmd!')
 vim.scriptencoding = 'utf-8'
 opt.encoding = 'utf-8'
 opt.fileencoding = 'utf-8'
+vim.cmd[[colorscheme solarized-osaka]]
 
 -- display setting
 vim.wo.number = true
